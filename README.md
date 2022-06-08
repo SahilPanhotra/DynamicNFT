@@ -1,15 +1,18 @@
-# Basic Sample Hardhat Project
+## Dynamic NFT
+This is a Dynamic NFT Project Which Upgrades When You call Upgrade Function or damage Function
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+It is completey On Chain Along with Metadata
 
-Try running some of the following tasks:
+It is Deployed to Polygon chain to save some money on gas fees
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+### Deploy 
+1:Clone the Repo
+2:Create a file name ".env"
+3:ADD The Following Code:
+TESTNET_RPC="VALUE" //Get Polygon Testnet RPC from alchemy or anyother node provider 
+PRIVATE_KEY="VALUE" //You metamask account private Key
+POLYGONSCAN_API_KEY="VALUE" //Create an account and polygon scan create an app over there and copy the api key and paste it here
+
+4:Compile the Project Using "npx hardhat compile"
+5:deploy to polygon testnet using "npx hardhat run scripts/deploy.js --network mumbai"
+6:Verify your Contract Using "npx hardhat verify --network mumbai 'CONTRACT ADDRESS'"
